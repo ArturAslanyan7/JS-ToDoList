@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2f363e;
+}
+
+.box{
+    position: relative;
+    width: 450px;
+    height: 550px;
+    padding: 20px 40px;
+    background: #2f363e;
+    box-shadow: 25px 25px 75px rgba(0,0,0,0.25), 10px 10px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset -5px -5px 15px rgba(0,0,0,0.75)
+}
+
+
+h2{
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#inputBox{
+    position: relative;
+    width: 100%;
+    border:none;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    
+}
+
+.box li{
+    position: relative;
+    display: flex;
+    align-items:center ;
+    background: #1f83f2;
+    margin:  15px  0;
+    padding-left: 45px;
+    width:300px;
+    min-height: 45px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.box li.done{
+    background-color: #607d8b;
+}
+
+.box li::before{
+    content: '';
+    position: absolute;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    background: #2f363e;
+}
+
+.box li.done::after{
+    content: '';
+    position: absolute;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #1f83f2 ;
+}
+
+.box li i{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ff2c74;
+}
+
+.box li i::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(-45deg);
+}
+
+.box li i::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+#list{
+    position: relative;
+    height: 400px;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    color: #2f363e;
+    background: #fff;
+}
+
+@media screen  and (max-width:550px){
+    .box{
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        box-shadow:none;
+    }
+
+
+}
